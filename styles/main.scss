@@ -5,8 +5,10 @@ body {
 }
 .header-container {
   width: 985px;
-  position: relative;
   margin: 0 auto;
+  height: 28px;
+  padding-top: 10px;
+  position: relative;
 
 }
 header {
@@ -14,11 +16,10 @@ header {
   width: 100%;
   background-color: #f5f5f5;
 
-  .header-git-icon {
-    height: 32px;
-    width: 32px;
-  }
-
+}
+.header-right {
+  position: absolute;
+  right: 0;
 }
 .left-links {
   list-style: none;
@@ -29,4 +30,31 @@ header {
   li {
     display: inline-block;
   }
+
+}
+.right-header-user-info {
+  img {
+    width: 21px;
+    vertical-align: middle;
+  }
+
+}
+.octicon.octicon-triangle-down:before {
+  font-size: 10px;
+
+}
+.octicon.octicon-mark-github {
+  font-size: 28px;
+  vertical-align: middle;
+
+}
+.search-input {
+  width: 360px;
+  min-height: 28px;
+  padding: 4px 20px 4px 8px;
+  font-size: 12px;
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
 }

@@ -6,18 +6,18 @@
   <title>jimmythigpen (Jimmy Thigpen)</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="bower_components/octicons//octicons/octicons.css">
 </head>
 
 <body>
   <header>
     <div class="header-container">
       <span class="header-left">
-        <span>
-          <img src="images/header-icon.png" class="header-git-icon" />
-        </span>
-        <span>
-          <input type="search" value="" placeholder="Search GitHub" class="search-input" />
-        </span>
+
+        <span class="header octicon octicon-mark-github"></span>
+
+
+        <input type="search" value="" placeholder="Search GitHub" class="search-input" />
 
         <span>
           <ul class="left-links">
@@ -28,22 +28,24 @@
           </ul>
         </span>
       </span>
-
       <span class="header-right">
-
         <span class="right-header-user-info">
           <img src="images/small-user-icon.jpeg" />
+          <span>Jimmy Thigpen</span>
         </span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
+        <span class="header-right-icons">
+          <span class="octicon octicon-plus"></span>
+          <span class="octicon octicon-triangle-down"></span>
+          <span class="octicon octicon-inbox"></span>
+          <span class="octicon octicon-gear"></span>
+          <span class="octicon octicon-sign-in"></span>
+        </span>
       </span>
-
-
     </div>
   </header>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
 
 
 
@@ -51,6 +53,8 @@
 
   </div>
 
+  <script type="text/javascript" src="main.js"></script>
+  <script src="token.js"></script>
 </body>
 
 </html>
