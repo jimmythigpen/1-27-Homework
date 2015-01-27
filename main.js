@@ -3,8 +3,11 @@
 
   $(document).ready(function() {
 
+    var myGitHubAddress = "https://api.github.com/users/jimmythigpen/repos";
+    var gitURL = myGitHubAddress + "?access_token=" + gitHubToken;
+
     $.ajax({
-      url: "https://api.github.com/users/jimmythigpen/repos",
+      url: gitURL,
       dataType: 'json'
     }).done(function(repoResults) {
       console.log(repoResults);
