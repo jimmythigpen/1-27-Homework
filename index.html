@@ -34,8 +34,10 @@
           <span>Jimmy Thigpen</span>
         </span>
         <span class="header-right-icons">
+          <span>
           <span class="octicon octicon-plus"></span>
           <span class="octicon octicon-triangle-down"></span>
+          </span>
           <span class="octicon octicon-inbox"></span>
           <span class="octicon octicon-gear"></span>
           <span class="octicon octicon-sign-in"></span>
@@ -47,17 +49,24 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
 
+  <div class="body-container">
 
   <div class="user-container">
 
     <script type="text/template" class="user-info">
 
-      <span class="avatar-img">
-        <a href="<%= url %>">
-          <img src="<%= avatar_url %>" />
-        </a>
-      </span>
-
+        <span class="avatar-img">
+          <a href="<%= url %>">
+            <img src="<%= avatar_url %>" />
+          </a>
+        </span>
+        <span class="user-name">
+          <%= name %>
+        </span>
+        <span class="user-login-name">
+          <%= login %>
+          </span>
+    </div>
 
     </script>
 
@@ -65,16 +74,42 @@
 
   <div class="repo-container">
 
+    <ul class="nav-links">
+      <li>
+        <span class="octicon octicon-diff-added"></span>
+        Contributions
+      </li>
+      <li>
+        <a href="#">
+        <span class="octicon octicon-repo-pull"></span>
+        Repositories
+      </a>
+      </li>
+      <li>
+        <span class="octicon octicon-rss"></span>
+        Public Activity
+      </li>
+      <li>
+        <button>
+        <span class="octicon octicon-pencil"></span>
+        Edit Profile
+      </button>
+      </li>
+    </ul>
+
+    
     <script type="text/template" class="repo-info">
 
-      <span>
+      <li>
         <%= name %>
 
-      </span>
+      </li>
 
     </script>
 
   </div>
+
+</div>
 
   <script src="token.js"></script>
   <script type="text/javascript" src="main.js"></script>

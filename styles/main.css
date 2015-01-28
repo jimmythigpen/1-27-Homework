@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: Helvetica, arial; }
 
 .header-container {
   width: 985px;
@@ -8,6 +9,36 @@ body {
   height: 28px;
   padding-top: 10px;
   position: relative; }
+
+.body-container {
+  width: 985px;
+  margin: 0 auto;
+  margin-top: 20px; }
+
+.user-container {
+  /* width: 25%; */
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top; }
+
+.repo-container {
+  width: 74%;
+  display: inline-block; }
+  .repo-container div {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
+.repo-info li {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  list-style: none;
+  border-bottom: 1px solid #eee; }
+
+.avatar-img img {
+  display: inline-block;
+  width: 230px;
+  border-radius: 6px; }
 
 header {
   height: 49px;
@@ -18,17 +49,57 @@ header {
   position: absolute;
   right: 0; }
 
+.header-right-icons > span {
+  padding: 4px 8px; }
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  /*   border-bottom: 1px solid #ddd; */ }
+  .nav-links li {
+    display: inline-block;
+    padding: 8px 12px 7px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: solid 1px #e5e5e5; }
+    .nav-links li:active {
+      border-bottom: 1px solid transparent; }
+    .nav-links li:nth-child(4) {
+      float: right;
+      padding-right: 0;
+      border-bottom: none; }
+      .nav-links li:nth-child(4) button {
+        background: linear-gradient(to bottom, #ffffff, #e8e8e8);
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        color: #333;
+        font-size: 13px;
+        font-weight: 600;
+        text-shadow: 0 1px 0 #f5f5f5;
+        line-height: 25px;
+        padding: 0 10px;
+        cursor: pointer; }
+
 .left-links {
   list-style: none;
   display: inline-block;
   padding: 0;
   margin: 0; }
   .left-links li {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 8px; }
 
 .right-header-user-info img {
   width: 21px;
   vertical-align: middle; }
+.right-header-user-info span {
+  font-size: 13px;
+  font-weight: bold; }
 
 .octicon.octicon-triangle-down:before {
   font-size: 10px; }
@@ -46,5 +117,19 @@ header {
   border: 1px solid #ccc;
   border-radius: 3px;
   outline: none; }
+
+.user-name {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 5px; }
+
+.user-login-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #666;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EEEEEE; }
 
 /*# sourceMappingURL=main.css.map */

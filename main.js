@@ -40,7 +40,7 @@
       url: myGitHubAddress + gitToken,
       dataType: 'json'
     }).done(function(userResults) {
-      // console.log(userResults);
+      console.log(userResults);
       userTemplate.append(renderUserTemplate(userResults));
     });
 
