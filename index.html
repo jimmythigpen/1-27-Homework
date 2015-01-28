@@ -48,8 +48,31 @@
   <script src="bower_components/underscore/underscore.js"></script>
 
 
+  <div class="user-container">
 
-  <div class="container">
+    <script type="text/template" class="user-info">
+
+      <span class="avatar-img">
+        <a href="<%= url %>">
+          <img src="<%= avatar_url %>" />
+        </a>
+      </span>
+
+
+    </script>
+
+  </div>
+
+  <div class="repo-container">
+
+    <script type="text/template" class="repo-info">
+
+      <span>
+        <%= name %>
+
+      </span>
+
+    </script>
 
   </div>
 
