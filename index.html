@@ -31,12 +31,12 @@
       <span class="header-right">
         <span class="right-header-user-info">
           <img src="images/small-user-icon.jpeg" />
-          <span>Jimmy Thigpen</span>
+          <span>jimmythigpen</span>
         </span>
         <span class="header-right-icons">
           <span>
-          <span class="octicon octicon-plus"></span>
-          <span class="octicon octicon-triangle-down"></span>
+            <span class="octicon octicon-plus"></span>
+            <span class="octicon octicon-triangle-down"></span>
           </span>
           <span class="octicon octicon-inbox"></span>
           <span class="octicon octicon-gear"></span>
@@ -48,31 +48,84 @@
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
 
   <div class="body-container">
 
-  <div class="user-container">
+    <div class="user-container">
 
-    <script type="text/template" class="user-info">
+      <script type="text/template" class="user-info">
 
-        <span class="avatar-img">
-          <a href="<%= url %>">
-            <img src="<%= avatar_url %>" />
-          </a>
-        </span>
-        <span class="user-name">
-          <%= name %>
-        </span>
-        <span class="user-login-name">
-          <%= login %>
+        <div class="avatar-info-container">
+
+          <span class="avatar-img">
+            <a href="<%= html_url %>">
+              <img src="<%= avatar_url %>" />
+            </a>
           </span>
+
+          <span class="user-name">
+            <%=name %>
+          </span>
+
+          <span class="user-login-name">
+            <%=login %>
+          </span>
+
+        </div>
+
+
+        <div class="user-info-details-container">
+          <div>
+            <span class="octicon octicon-organization"></span>
+            <%=company %>
+          </div>
+          <div>
+            <span class="octicon octicon-location"></span>
+            <%=location %>
+          </div>
+          <div>
+            <span class="octicon octicon-mail"></span>
+            <%=email %>
+          </div>
+          <div>
+            <span class="octicon octicon-link"></span>
+            <%=blog %>
+          </div>
+          <div class="createdAt">
+            <span class="octicon octicon-clock"></span>Joined on <%= created_at %></div>
+        </div>
+
+
+        <div class="small-user-info-container">
+
+          <div class="info-container-data">
+          <span><%= followers %></span>
+          <span class="title">Followers</span>
+          </div>
+
+          <div class="info-container-data">
+          <span class="star-count"></span>
+          <span class="title">Starred</span>
+          </div>
+
+          <div class="info-container-data">
+          <span><%= following %></span>
+          <span class="title">Following</span>
+          </div>
+
+        </div>
+
+
+        <h4>Organizations</h4>
+
     </div>
 
     </script>
 
   </div>
 
-  <div class="repo-container">
+  <div class="repositories-section">
 
     <ul class="nav-links">
       <li>
@@ -81,9 +134,9 @@
       </li>
       <li>
         <a href="#">
-        <span class="octicon octicon-repo-pull"></span>
-        Repositories
-      </a>
+          <span class="octicon octicon-repo-pull"></span>
+          Repositories
+        </a>
       </li>
       <li>
         <span class="octicon octicon-rss"></span>
@@ -91,17 +144,53 @@
       </li>
       <li>
         <button>
-        <span class="octicon octicon-pencil"></span>
-        Edit Profile
-      </button>
+          <span class="octicon octicon-pencil"></span>
+          Edit Profile
+        </button>
       </li>
     </ul>
 
-    
+    <div class="repo-link-container">
+      <input type="search" value="" placeholder="Find a repository" class="repo-search-input" />
+      <button type="submit" id="repo-search-button">
+        Search
+      </button>
+      <ul class="repo-links-list">
+        <li>All</li>
+        <li>Public</li>
+        <li>Private</li>
+        <li>Sources</li>
+        <li>Forks</li>
+        <li>Mirrors</li>
+      </ul>
+      <button type="submit" id="repo-new-button">
+        <span class="octicon octicon-repo-pull"></span>
+        New
+      </button>
+    </div>
+
+    <ul class="repo-container"></ul>
+
     <script type="text/template" class="repo-info">
 
       <li>
-        <%= name %>
+        <div>
+        <a href="<%= url %>">
+          <%=name %>
+        </a>
+        <span class="language-etc">
+          <%=language %>
+          <span class="octicon octicon-star">
+            <%=stargazers_count %>
+            <span class="octicon octicon-git-branch"></span>
+              <%=forks_count %>
+        </span>
+        </div>
+
+        <span class="updated">Updated
+          <%=updated_at %>
+        </span>
+
 
       </li>
 
@@ -109,7 +198,7 @@
 
   </div>
 
-</div>
+  </div>
 
   <script src="token.js"></script>
   <script type="text/javascript" src="main.js"></script>

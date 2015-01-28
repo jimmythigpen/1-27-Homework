@@ -12,47 +12,186 @@ body {
   position: relative;
 
 }
-
 .body-container {
   width: 985px;
-  margin: 0 auto;
-  margin-top: 20px
+  margin: 20px auto 0;
 }
-
 .user-container {
-  /* width: 25%; */
   padding: 10px;
   display: inline-block;
   vertical-align: top;
+  padding-left: 0px;
+
+}
+.user-info-details-container {
+  padding-top: 15px;
+
+  div {
+    display: block;
+    padding: 6px 0 2px;
+    font-size: 14px;
+  }
+  span {
+    color: #ccc;
+    /* margin-right: 7px; */
+    width: 23px;
+  }
+
+}
+
+.small-user-info-container {
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 15px;
+
 
 
 }
 
-.repo-container {
+.info-container-data {
+  display: inline-block;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &:nth-child(3) {
+    margin-left: 30px;
+  }
+
+  span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4183c4;
+  }
+
+}
+
+.info-container-data .title {
+  font-size: 11px;
+  color: #999;
+  font-weight: 300;
+}
+
+
+
+.createdAt {
+
+  padding-bottom: 15px;
+
+}
+.repositories-section {
   width: 74%;
   display: inline-block;
 
   div {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
+
 }
 
-.repo-info li {
+.repo-container {
+  padding-left: 0px;
+}
+
+
+.repo-container li {
   position: relative;
-  padding-top: 30px;
   padding-bottom: 30px;
   list-style: none;
   border-bottom: 1px solid #eee;
+
+  .updated {
+    display: block;
+    font-size: 13px;
+    color: #888;
+  }
+  .language-etc {
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+  }
+  a {
+    font-size: 20px;
+    color: #4183c4;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.repo-links-list {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  margin-left: 30px;
+
+  li {
+    display: inline-block;
+    color: #4183c4;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 6px;
+  }
+
+}
+
+.repo-link-container {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.repo-search-input {
+  width:260px;
+  min-height: 34px;
+  padding: 7px 8px;
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+#repo-search-button {
+  cursor: pointer;
+  padding: 7px 12px;
+  font-weight: 600;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  min-height:34px;
+  font-size: 13px;
+}
+
+#repo-new-button {
+  float: right;
+  transform: translateY(5%);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(#8add6d, #60b044);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  padding: 8px 11px;
+  font-size: 13px;
+  font-weight: bold;
+  border-color: #5ca941;
 }
 
 .avatar-img img {
   display: inline-block;
   width: 230px;
   border-radius: 6px;
+
 }
-
-
 header {
   height: 49px;
   width: 100%;
@@ -62,55 +201,72 @@ header {
 .header-right {
   position: absolute;
   right: 0;
-}
 
+}
 .header-right-icons > span {
   padding: 4px 8px;
-}
 
+}
 .nav-links {
   list-style: none;
   padding: 0;
+  margin: 0;
   margin: 0 0 15px;
-/*   border-bottom: 1px solid #ddd; */
+  /*   border-bottom: 1px solid #ddd; */
 
-   li {
+  ::after {
+    background-color:red;
+  }
 
-     display: inline-block;
-     padding: 8px 12px 7px;
-     font-size: 14px;
-     line-height: 20px;
-     color: #666;
-     text-decoration: none;
-     border-bottom: solid 1px #e5e5e5;
+  li {
 
+    display: inline-block;
+    padding: 8px 12px 7px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: solid 1px #e5e5e5;
 
-     &:active {
-       border-bottom: 1px solid transparent;
-     }
+    &:active {
+      border-bottom: 1px solid transparent;
 
-     &:nth-child(4)
-     {
-       float: right;
-       padding-right: 0;
-       border-bottom:none;
+    }
 
-       button {
-      background: linear-gradient(to bottom, #ffffff, #e8e8e8);
-      border: 1px solid #dcdcdc;
-      border-radius: 4px;
-      color: #333;
-      font-size: 13px;
-      font-weight: 600;
-      text-shadow: 0 1px 0 #f5f5f5;
-      line-height: 25px;
-      padding: 0 10px;
-      cursor: pointer;
-       }
-     }
-   }
+    &:nth-child(2) {
+      border-top: solid 1px #e5e5e5;
+      border-left: solid 1px #e5e5e5;
+      border-right: solid 1px #e5e5e5;
+      border-radius: 3px 3px 0 0;
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+    }
+    &:nth-child(4) {
+      float: right;
+      padding-right: 0;
+      border-bottom: none;
+
+      button {
+        background: linear-gradient(to bottom, #ffffff, #e8e8e8);
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        color: #333;
+        font-size: 13px;
+        font-weight: 600;
+        text-shadow: 0 1px 0 #f5f5f5;
+        line-height: 25px;
+        padding: 0 10px;
+        cursor: pointer;
+        transform: translateY(-10%);
+      }
+    }
+  }
+
 }
-
 .left-links {
   list-style: none;
   display: inline-block;
@@ -125,20 +281,19 @@ header {
   }
 
 }
-
 .right-header-user-info {
 
   img {
     width: 21px;
     vertical-align: middle;
-  }
 
+  }
   span {
     font-size: 13px;
     font-weight: bold;
   }
-}
 
+}
 .octicon.octicon-triangle-down:before {
   font-size: 10px;
 
@@ -157,20 +312,21 @@ header {
   border: 1px solid #ccc;
   border-radius: 3px;
   outline: none;
+
 }
 
 .user-name {
-  display:block;
-  font-size:26px;
+  display: block;
+  font-size: 26px;
   font-weight: 600;
   margin-top: 5px;
-}
 
+}
 .user-login-name {
-  display:block;
+  display: block;
   font-size: 20px;
   font-weight: 300;
   color: #666;
   padding-bottom: 15px;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eee;
 }
