@@ -6,7 +6,7 @@ body {
 .octicon.octicon-mark-github {
   color: #333; }
   .octicon.octicon-mark-github:hover {
-    color: #3782C3; }
+    color: #3782c3; }
 
 .header-container {
   width: 985px;
@@ -23,7 +23,7 @@ body {
   padding: 10px;
   display: inline-block;
   vertical-align: top;
-  padding-left: 0px; }
+  padding-left: 0; }
 
 .user-info-details-container {
   padding-top: 15px; }
@@ -48,7 +48,7 @@ body {
 .repo-tiny-info {
   font-size: 12px;
   font-weight: bold;
-  padding: 0px 3px 0px 3px; }
+  padding: 0 3px; }
 
 .tiny-links {
   text-decoration: none; }
@@ -83,7 +83,7 @@ body {
     margin-bottom: 10px; }
 
 .repo-container {
-  padding-left: 0px; }
+  padding-left: 0; }
 
 .repo-container li {
   position: relative;
@@ -174,7 +174,7 @@ header {
   padding: 4px 8px;
   color: #333; }
   .header-right-icons a > span:hover {
-    color: #3782C3; }
+    color: #3782c3; }
 
 .header-right-icons a {
   text-decoration: none; }
@@ -182,11 +182,10 @@ header {
 .nav-links {
   list-style: none;
   padding: 0;
-  margin: 0;
   margin: 0 0 15px;
   /*   ::after {
-    border: 100px solid black;
-  } */ }
+  border: 100px solid black;
+} */ }
   .nav-links li {
     display: inline-block;
     padding: 8px 12px 7px;
@@ -236,7 +235,7 @@ header {
     text-decoration: none;
     color: #333; }
     .left-links a:hover {
-      color: #3782C3; }
+      color: #3782c3; }
 
 .right-header-user-info img {
   width: 21px;
@@ -246,7 +245,7 @@ header {
   font-weight: bold;
   color: #333; }
   .right-header-user-info span:hover {
-    color: #3782C3; }
+    color: #3782c3; }
 .right-header-user-info a {
   text-decoration: none; }
 
