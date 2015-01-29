@@ -33,6 +33,22 @@
     });
 
     //
+    // Orgs AJAX Call
+    //
+    var orgs_avatarURL;
+    $.ajax({
+      url: myGitHubAddress + orgsAddToURL + gitToken,
+    }).done(function(orgsResults) {
+      _.each(orgsResults, function(item) {
+        orgsTemplate.append(renderOrgsTemplate(item));
+        orgs_avatarURL = item.avatar_url;
+        console.log(avatar_url);
+        $()
+
+      })
+    });
+
+    //
     // User AJAX Call
     //
     $.ajax({
@@ -40,6 +56,7 @@
     }).done(function(userResults) {
       var createdAt = moment(userResults.created_at).format("MMM Do YYYY");
       userResults.created_at = createdAt;
+      userResults.orgsAvatarUrl = orgs_avatarURL;
       userTemplate.append(renderUserTemplate(userResults));
     });
 
@@ -51,21 +68,5 @@
     }).done(function(starResults) {
       $('.star-count').text(starResults.length);
     })
-
-    //
-    // Orgs AJAX Call
-    //
-    $.ajax({
-      url: myGitHubAddress + orgsAddToURL + gitToken,
-    }).done(function(orgsResults) {
-      _.each(orgsResults, function(item) {
-        orgsTemplate.append(renderOrgsTemplate(item));
-        var avatar_url = item.avatar_url;
-        console.log(avatar_url);
-        $()
-
-      })
-    });
-
   });
 })();
