@@ -100,24 +100,26 @@
         <div class="small-user-info-container">
 
           <div class="info-container-data">
-          <span><%= followers %></span>
+          <a href=""><span><%= followers %></span></a>
           <span class="title">Followers</span>
           </div>
 
           <div class="info-container-data">
-          <span class="star-count"></span>
+          <a href=""><span class="star-count"></span></a>
           <span class="title">Starred</span>
           </div>
 
           <div class="info-container-data">
-          <span><%= following %></span>
+          <a href=""><span><%= following %></span></a>
           <span class="title">Following</span>
           </div>
 
         </div>
 
-
+        <div class="orgs">
         <h4>Organizations</h4>
+        <img src="https://avatars.githubusercontent.com/u/10091499?v=3"/>
+        </div>
 
     </div>
 
@@ -179,11 +181,17 @@
           <%=name %>
         </a>
         <span class="language-etc">
-          <%=language %>
-          <span class="octicon octicon-star">
-            <%=stargazers_count %>
+          <span class="repo-tiny-info"><%=language %></span>
+
+            <a href="<%=html_url%>/stargazers" class="tiny-links">
+            <span class="octicon octicon-star">
+            <span class="repo-tiny-info"><%=stargazers_count %></span>
+            </a>
+
+            <a href="<%= html_url%>/network" class="tiny-links">
             <span class="octicon octicon-git-branch"></span>
-              <%=forks_count %>
+            <span class="repo-tiny-info"><%=forks_count %><span>
+            </a>
         </span>
         </div>
 

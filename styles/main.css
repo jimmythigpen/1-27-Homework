@@ -45,6 +45,14 @@ body {
   border-bottom: 1px solid #eee;
   margin-top: 15px; }
 
+.repo-tiny-info {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px 3px 0px 3px; }
+
+.tiny-links {
+  text-decoration: none; }
+
 .info-container-data {
   display: inline-block; }
   .info-container-data:first-child {
@@ -56,6 +64,8 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: #4183c4; }
+  .info-container-data a {
+    text-decoration: none; }
 
 .info-container-data .title {
   font-size: 11px;
@@ -256,6 +266,9 @@ header {
   border: 1px solid #ccc;
   border-radius: 3px;
   outline: none; }
+
+.orgs img {
+  width: 42px; }
 
 .user-name {
   display: block;
