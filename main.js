@@ -15,6 +15,9 @@
     var renderRepoTemplate = _.template($('.repo-info').text());
     var repoTemplate = $('.repo-container');
 
+    var renderOrgsTemplate = _.template($('.orgs-info').text());
+    var orgsTemplate = $('.orgs-container');
+
     //
     // Repos AJAX Call
     //
@@ -56,16 +59,13 @@
       url: myGitHubAddress + orgsAddToURL + gitToken,
     }).done(function(orgsResults) {
       _.each(orgsResults, function(item) {
-        console.log(item.url);
+        orgsTemplate.append(renderOrgsTemplate(item));
+        var avatar_url = item.avatar_url;
+        console.log(avatar_url);
+        $()
+
       })
     });
-
-
-      // console.log(orgsResults.url);
-      // $('.orgs-count').text(orgsResults.url);
-
-
-
 
   });
 })();

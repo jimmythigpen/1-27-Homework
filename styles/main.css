@@ -3,6 +3,11 @@ body {
   background-color: #fff;
   font-family: Helvetica, arial; }
 
+.octicon.octicon-mark-github {
+  color: #333; }
+  .octicon.octicon-mark-github:hover {
+    color: #3782C3; }
+
 .header-container {
   width: 985px;
   margin: 0 auto;
@@ -138,7 +143,8 @@ body {
   padding: 8px 11px;
   font-size: 13px;
   font-weight: bold;
-  border-color: #5ca941; }
+  border-color: #5ca941;
+  cursor: pointer; }
 
 .avatar-img img {
   display: inline-block;
@@ -154,8 +160,14 @@ header {
   position: absolute;
   right: 0; }
 
-.header-right-icons > span {
-  padding: 4px 8px; }
+.header-right-icons a > span {
+  padding: 4px 8px;
+  color: #333; }
+  .header-right-icons a > span:hover {
+    color: #3782C3; }
+
+.header-right-icons a {
+  text-decoration: none; }
 
 .nav-links {
   list-style: none;
@@ -210,13 +222,23 @@ header {
     font-size: 13px;
     font-weight: bold;
     padding: 4px 8px; }
+  .left-links a {
+    text-decoration: none;
+    color: #333; }
+    .left-links a:hover {
+      color: #3782C3; }
 
 .right-header-user-info img {
   width: 21px;
   vertical-align: middle; }
 .right-header-user-info span {
   font-size: 13px;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #333; }
+  .right-header-user-info span:hover {
+    color: #3782C3; }
+.right-header-user-info a {
+  text-decoration: none; }
 
 .octicon.octicon-triangle-down:before {
   font-size: 10px; }

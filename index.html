@@ -14,33 +14,33 @@
     <div class="header-container">
       <span class="header-left">
 
-        <span class="header octicon octicon-mark-github"></span>
+        <a href=""><span class="header octicon octicon-mark-github"></span></a>
 
 
         <input type="search" value="" placeholder="Search GitHub" class="search-input" />
 
         <span>
           <ul class="left-links">
-            <li>Explore</li>
-            <li>Gist</li>
-            <li>Blog</li>
-            <li>Help</li>
+            <a href=""><li>Explore</li></a>
+            <a href=""><li>Gist</li></a>
+            <a href=""><li>Blog</li></a>
+            <a href=""><li>Help</li></a>
           </ul>
         </span>
       </span>
       <span class="header-right">
         <span class="right-header-user-info">
           <img src="images/small-user-icon.jpeg" />
-          <span>jimmythigpen</span>
+          <a href=""><span>jimmythigpen</span></a>
         </span>
         <span class="header-right-icons">
-          <span>
+          <a href=""><span>
             <span class="octicon octicon-plus"></span>
             <span class="octicon octicon-triangle-down"></span>
-          </span>
-          <span class="octicon octicon-inbox"></span>
-          <span class="octicon octicon-gear"></span>
-          <span class="octicon octicon-sign-in"></span>
+          </span></a>
+          <a href=""><span class="octicon octicon-inbox"></span></a>
+          <a href=""><span class="octicon octicon-gear"></span></a>
+            <a href=""><span class="octicon octicon-sign-in"></span></a>
         </span>
       </span>
     </div>
@@ -86,11 +86,11 @@
           </div>
           <div>
             <span class="octicon octicon-mail"></span>
-            <%=email %>
+            <a href="mailto:<%=email %>"><%=email %></a>
           </div>
           <div>
             <span class="octicon octicon-link"></span>
-            <%=blog %>
+            <a href="<%=blog %>"><%=blog %></a>
           </div>
           <div class="createdAt">
             <span class="octicon octicon-clock"></span>Joined on <%= created_at %></div>
@@ -143,10 +143,10 @@
         Public Activity
       </li>
       <li>
-        <button>
+        <a href="https://github.com/settings"><button>
           <span class="octicon octicon-pencil"></span>
           Edit Profile
-        </button>
+        </button></a>
       </li>
     </ul>
 
@@ -156,17 +156,17 @@
         Search
       </button>
       <ul class="repo-links-list">
-        <li>All</li>
-        <li>Public</li>
-        <li>Private</li>
-        <li>Sources</li>
-        <li>Forks</li>
-        <li>Mirrors</li>
+        <a href=""><li>All</li></a>
+        <a href=""><li>Public</li></a>
+        <a href=""><li>Private</li></a>
+        <a href=""><li>Sources</li></a>
+        <a href=""><li>Forks</li></a>
+        <a href=""><li>Mirrors</li></a>
       </ul>
-      <button type="submit" id="repo-new-button">
+      <a href="https://github.com/new"><button type="submit" id="repo-new-button">
         <span class="octicon octicon-repo-pull"></span>
         New
-      </button>
+      </button></a>
     </div>
 
     <ul class="repo-container"></ul>
@@ -175,7 +175,7 @@
 
       <li>
         <div>
-        <a href="<%= url %>">
+        <a href="<%= html_url %>">
           <%=name %>
         </a>
         <span class="language-etc">

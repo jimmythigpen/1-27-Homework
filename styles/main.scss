@@ -4,6 +4,16 @@ body {
   font-family: Helvetica, arial;
 
 }
+
+.octicon.octicon-mark-github {
+  color: #333;
+
+  &:hover {
+    color: #3782C3;
+  }
+}
+
+
 .header-container {
   width: 985px;
   margin: 0 auto;
@@ -184,6 +194,7 @@ body {
   font-size: 13px;
   font-weight: bold;
   border-color: #5ca941;
+  cursor: pointer;
 }
 
 .avatar-img img {
@@ -203,10 +214,20 @@ header {
   right: 0;
 
 }
-.header-right-icons > span {
+.header-right-icons a > span {
   padding: 4px 8px;
+  color: #333;
+
+  &:hover {
+    color:#3782C3;
+  }
 
 }
+
+.header-right-icons a {
+  text-decoration: none;
+}
+
 .nav-links {
   list-style: none;
   padding: 0;
@@ -279,6 +300,14 @@ header {
     padding: 4px 8px;
   }
 
+  a {
+    text-decoration: none;
+    color: #333;
+  &:hover {
+    color: #3782C3;
+  }
+  }
+
 }
 .right-header-user-info {
 
@@ -290,6 +319,15 @@ header {
   span {
     font-size: 13px;
     font-weight: bold;
+    color: #333;
+
+    &:hover {
+      color: #3782C3;
+    }
+  }
+
+  a {
+    text-decoration: none;
   }
 
 }
