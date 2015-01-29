@@ -6,6 +6,7 @@
     var myGitHubAddress = "https://api.github.com/users/jimmythigpen";
     var repoAddToURL = "/repos?sort=created";
     var starAddToURL = "/starred";
+    var orgsAddToURL = "/orgs";
     var gitToken = "?access_token=" + gitHubToken;
 
     var renderUserTemplate = _.template($('.user-info').text());
@@ -47,5 +48,24 @@
     }).done(function(starResults) {
       $('.star-count').text(starResults.length);
     })
+
+    //
+    // Orgs AJAX Call
+    //
+    $.ajax({
+      url: myGitHubAddress + orgsAddToURL + gitToken,
+    }).done(function(orgsResults) {
+      _.each(orgsResults, function(item) {
+        console.log(item.url);
+      })
+    });
+
+
+      // console.log(orgsResults.url);
+      // $('.orgs-count').text(orgsResults.url);
+
+
+
+
   });
 })();
